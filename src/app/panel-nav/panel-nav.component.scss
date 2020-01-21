@@ -1,0 +1,27 @@
+.navBar{
+    background-color: #009cde; 
+    overflow: hidden;
+  }
+  
+  /*Floats each item to the left with padding of 14 & 16 px.
+  Removes the underline with text decoration = none.*/
+  .navBar a{
+    float: left;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Tahoma;
+  }
+  
+  /*Background color change during hover state*/
+  .navBar a:hover{
+    background-color: white;
+    color: #009cde;
+  }
+  
+  /*Hides the menu Icon which will show when the nav needs to be responsive*/
+  .navBar .icon{
+    display: none;
+  }
+  
