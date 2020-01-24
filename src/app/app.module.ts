@@ -1,7 +1,11 @@
+//modulos
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+//servicios
+import { ReportListService } from './report-list.service';
+//componentes
 import { AppComponent } from './app.component';
 import { PanelNavComponent } from './panel-nav/panel-nav.component';
 import { PanelFooterComponent } from './panel-footer/panel-footer.component';
@@ -29,7 +33,9 @@ import { ReportFormComponent } from './report-form/report-form.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    ReportListService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

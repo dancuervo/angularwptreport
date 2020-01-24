@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Lista } from '../../classes/wptreport/lista';
+import { ReportListService } from '../report-list.service';
+//import { WPTReport } from 'src/classes/wptreport/wptreport';
 
 @Component({
   selector: 'app-panel-list-reports',
@@ -8,12 +9,15 @@ import { Lista } from '../../classes/wptreport/lista';
 })
 export class PanelListReportsComponent implements OnInit {
 
-    list = ['repor01', 'report02'];
-    model = new Lista( this.list );
-
     
+    reports:any[] = [];
+
+    constructor(private _lista: ReportListService) { 
+      this.reports = _lista.getLista();
+    }
 
   ngOnInit() {
   }
 
 }
+  
