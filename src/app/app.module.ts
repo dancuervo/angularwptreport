@@ -7,6 +7,9 @@ import { FormsModule } from '@angular/forms';
 import { ReportListService } from './report-list.service';
 //componentes
 import { AppComponent } from './app.component';
+//modules
+import { HttpClientModule } from '@angular/common/http';
+//componentes
 import { PanelNavComponent } from './panel-nav/panel-nav.component';
 import { PanelFooterComponent } from './panel-footer/panel-footer.component';
 import { PanelGetStartedComponent } from './panel-get-started/panel-get-started.component';
@@ -31,7 +34,8 @@ import { ReportFormComponent } from './report-form/report-form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     ReportListService

@@ -1,34 +1,21 @@
 import { Injectable } from '@angular/core';
-import { Lista } from '../classes/wptreport/lista';
-import { WPTReport } from 'src/classes/wptreport/wptreport';
+//modules
+import { HttpClient } from '@angular/common/http';
+
+//import { WPTReport } from 'src/classes/wptreport/wptreport';
 
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ReportListService {
 
-  l: any[] = [
-    {
-        ticket:"01", harString:'report0', platform: ['mobile','desktop'], website:"www.algo.com"
-    },
-    {
-        ticket:"02", harString:'report1', platform: ['mobile','desktop'], website:"www.ccc.com"
-    },
-    {
-        ticket:"03", harString:'report2', platform: ['mobile','desktop'], website:"www.ddd.com"
-    },
-    {
-        ticket:"04", harString:'report3', platform: ['mobile','desktop'], website:"www.bbb.com"
-    }
-]
- 
-
-  constructor() {
-    console.log('servicio funciona!')
+  url:string = '../assets/archivos/lista.json';
+  
+  constructor( private http: HttpClient ){
+    console.log('servicio http funciona!')
   }
 
-  getLista(): WPTReport [] {
-    return this.l;
+  getLista(){
+    return this.http.get(this.url);
   }
+
 }

@@ -16,7 +16,7 @@ export class ReportFormComponent {
 
   submitted = false;
 
-  onSubmit() { this.submitted = true; this.model; this.newReport()}
+  onSubmit() { this.submitted = true; this.model; this.newReport() }
 
   newReport(){
     this.model = new WPTReport('[Y-YYYYYYYYYYYYY]','000000_TN_478b44e7f48d43ccd208c748a22d27bc', this.device,'www.XXX.com');
